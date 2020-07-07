@@ -55,21 +55,21 @@ print(f3(8))     # Should print 9
 
 # YOUR CODE HERE
 def f4(**attributes):
-    return ", ".join(
-        f"{param}: {value}"
-        for param, value in attributes.items()
+    return " ".join(
+        f"key: {key}, value: {value}"
+        for key, value in attributes.items()
     )
 
 # Should print
 # key: a, value: 12
 # key: b, value: 30
-f4(a=12, b=30)
+print(f4(a=12, b=30))
 
 # Should print
 # key: city, value: Berkeley
 # key: population, value: 121240
 # key: founded, value: "March 23, 1868"
-f4(city="Berkeley", population=121240, founded="March 23, 1868")
+print(f4(city="Berkeley", population=121240, founded="March 23, 1868"))
 
 d = {
     "monster": "goblin",
@@ -77,4 +77,4 @@ d = {
 }
 
 # How do you have to modify the f4 call below to make this work?
-f4(**d)
+print(f4(**d))
