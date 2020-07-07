@@ -55,10 +55,11 @@ print(f3(8))     # Should print 9
 
 # YOUR CODE HERE
 def f4(**attributes):
-    return " ".join(
-        f"key: {key}, value: {value}"
-        for key, value in attributes.items()
-    )
+    # return " ".join(
+        # f"key: {key}, value: {value}"
+    # )
+    for key, value in attributes.items():
+        print(f'key: {key}, value: {value}')
 
 # Should print
 # key: a, value: 12

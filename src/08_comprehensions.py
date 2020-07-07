@@ -36,6 +36,6 @@ print(w)
 x = input("Enter comma-separated numbers: ").split(',')
 
 # What do you need between the square brackets to make it work?
-z = [n for n in x if n % 2 == 0]
+z = [int(n) for n in x if int(n) % 2 == 0]
 
 print(z)
