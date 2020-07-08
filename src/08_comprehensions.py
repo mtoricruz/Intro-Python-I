@@ -10,14 +10,15 @@ for more info regarding list comprehensions.
 
 # Write a list comprehension to produce the array [1, 2, 3, 4, 5]
 
-q = [x + 1 for x in range(5)]
+q = [i + 1 for i in range(5)]
+# alternatively: q = [i for i in range(1,6)]
 
 print (q)
 
 # Write a list comprehension to produce the cubes of the numbers 0-9:
 # [0, 1, 8, 27, 64, 125, 216, 343, 512, 729]
 
-b = [x**3 for x in range(10)]
+b = [i**3 for i in range(10)]
 
 print(b)
 
@@ -36,6 +37,6 @@ print(w)
 x = input("Enter comma-separated numbers: ").split(',')
 
 # What do you need between the square brackets to make it work?
-z = [int(n) for n in x if int(n) % 2 == 0]
+z = [n for n in x if int(n) % 2 == 0]
 
 print(z)

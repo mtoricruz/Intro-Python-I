@@ -45,3 +45,8 @@ geocache = Geocache("Newberry Views", 1.5, 2, 44.052137, -121.41556)
 print(geocache)
 
 # NOTE: Order matters in classing and inheritance. Triple check to make sure arguments that are passed down remain in the uniform order
+
+# NOTE: 'self' is naming convention and represents the instance 
+
+# NOTE: Rule of thumb between using class methods and static methods:
+# If you find yourself not calling the instance/class anywhere within the method(function)

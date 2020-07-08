@@ -31,22 +31,34 @@ import sys
 import calendar
 from datetime import datetime
 
-# datetime expects an integer
-# class calendar.TextCalendar -> prmonth + pryear
-
 # note: check argv and others
 argvlength = len(sys.argv)
-
-# step 1: calendar printed out with today's date with datetime.date()
-# - if no input, 
-#       default to todays date. 
 # - use method datetime.now().year & datetime.now().month
 # - store both in variable year & month
+users_input = input()
 
+if argvlength == 1:
+# - if no input, 
+#       default to todays date. 
+  month = datetime.now().month
+  year = datetime.now().year
+
+elif argvlength == 2:
 # - elif one input, 
-#       it's going to be the month and were going to use the current year.
+#       render specified month and were going to use the current year.
+  year = datetime.now().year
+  month = int(sys.argv[1])
+
+elif argvlength == 3:
 # - elif two inputs, 
 #       the first will be the month, 2nd will be the year. will use those for the calendar.
-# - else more than two inputs, 
-#       send error message.
+  month = int(sys.argv[1])  
+  year = int(sys.argv[2])
+else:
+# - else more than two inputs, send error message.
+  print('usage: 14_cal.py [month] [year]')
+  # exit program
+  sys.exit(1)
 
+cal = calendar.TextCalendar()
+cal.prmonth(year, month)

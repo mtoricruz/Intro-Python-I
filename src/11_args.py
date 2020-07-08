@@ -5,8 +5,8 @@
 # the sum. This is what you'd consider to be a regular, normal function.
 
 # YOUR CODE HERE
-def f1(num1, num2):
-    print(num1 + num2)
+def f1(a, b):
+    return a + b
 
 print(f1(8, 2))
 
@@ -16,10 +16,10 @@ print(f1(8, 2))
 
 # YOUR CODE HERE
 def f2(*sums):
-    result = 0
+    counter = 0
     for x in sums:
-        result += x
-    return result
+        counter += x
+    return counter
 
 print(f2(1))                    # Should print 1
 print(f2(1, 3))                 # Should print 4
@@ -38,7 +38,7 @@ print(f2(*a))    # Should print 22
 
 # YOUR CODE HERE
 
-def f3(num1, num2 = 0 + 1):
+def f3(num1, num2=1):
     return num1 + num2
 
 print(f3(1, 2))  # Should print 3
